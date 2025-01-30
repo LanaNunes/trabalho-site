@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255) /*fundo da pagina*/
+}
+header {
+    background:  rgb(255, 119, 86);/*barra de menu*/
+    color: rgb(93, 9, 62); /*letra do titulo*/
+    text-align: center;
+    padding: 20px;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: rgb(93, 9, 62);/* letras do menu*/
+    font-weight: bold;
+}
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* Estilo para a seção de produtos */
+#produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsivo, com colunas flexíveis */
+    gap: 1.5rem; /* Espaçamento entre os itens */
+    padding: 2rem;
+}
+
+#produtos article {
+    background-color: rgb(255, 255, 255); /*caixa de produtos*/
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgb(93, 9, 62);/*sombra na caixa de produtos*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover nos artigos */
+#produtos article:hover {
+    transform: translateY(-10px); /* Levanta um pouco o item */
+    box-shadow: 0 8px 16px rgb(255, 119, 86); /* Sombra mais forte ao passar o mouse */
+}
+
+/* Imagens dentro dos artigos */
+#produtos img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Garante que a imagem preencha o espaço de forma proporcional */
+    border-bottom: 1px solid #ddd;
+}
+
+/* Títulos dos artigos */
+#produtos h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #333;
+    padding: 0 1rem;
+}
+
+/* Descrição dos artigos */
+#produtos p {
+    font-size: 1rem;
+    color: rgb(93, 9, 62);
+    padding: 0 1rem;
+    margin: 0.5rem 0;
+}
+
+/* Preço dos artigos */
+#produtos p:last-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(93, 9, 62);
+    margin-bottom: 1rem;
+}
+
+/* Botão "Comprar agora" */
+#produtos button {
+    display: block;
+    width: 80%;
+    margin: 0 auto 1rem;
+    background-color: rgb(255, 119, 86); /* Cor de destaque */
+    color: rgb(255, 255, 255);/*cor das letras do botão*/
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito hover no botão */
+#produtos button:hover {
+    background-color: rgb(255, 119, 86) /* Cor mais escura no hover */
+}
+
+/* Para evitar que as imagens fiquem deformadas e manter um bom layout visual */
+@media (max-width: 768px) {
+    #produtos {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Colunas menores em telas menores */
+    }
+}
+
+.produto button {
+    background: rgb(255, 119, 86);
+    color: white;;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.produto button:hover {
+    background: rgb(255, 119, 86);
+}
+
+
+
+
+
+
